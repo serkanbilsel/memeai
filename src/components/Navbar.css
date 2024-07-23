@@ -1,0 +1,87 @@
+.navbar-logo {
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+/* Menü öğelerinin ortalanmasını sağlayan stil */
+ul {
+  display: flex;
+  justify-content: center; /* Menü öğelerini ortala */
+  width: 100%;
+}
+
+ul li {
+  list-style: none; /* Liste işaretlerini kaldır */
+}
+
+ul li a {
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+ul li a:hover {
+  color: #dddddd;
+}
+
+ul li a.active {
+  color: #ffffff;
+  border-bottom: 0.1px solid #03231f;
+}
+
+.flex.items-center img {
+  margin-right: 0.5rem; /* Logo ile metin arasına boşluk ekleyin */
+}
+
+.navbar-logo-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover; /* Eğer logo resmi tam yuvarlak görünmüyorsa */
+}
+.buy-now-button {
+  background: linear-gradient(90deg, #f34e4e 0%, #f5a623 100%);
+  color: #ffffff;
+  padding: 10px 20px;
+  font-family: "Russo One", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 25px; /* Yuvarlak köşeler */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  margin-left: auto; /* Sağ tarafa hizalamak için */
+  display: flex; /* İçeriği yatayda hizalamak için */
+  align-items: center; /* İçerikleri dikeyde ortala */
+  justify-content: center; /* İçerikleri yatayda ortala */
+  white-space: nowrap; /* Satır sonlarını engelle */
+}
+
+.buy-now-button span {
+  display: inline-block; /* Yan yana görünmesi için inline-block olarak ayarla */
+  margin: 0 5px; /* Yazılar arasında boşluk ekleyin */
+}
+
+.buy-now-button:hover {
+  background: linear-gradient(90deg, #f5a623 0%, #f34e4e 100%);
+  transform: scale(1.05); /* Butona hover efekti */
+}
+
+.buy-now-button:active {
+  transform: scale(0.95); /* Butona tıklama efekti */
+}
+
+/* Mobil görünümde logo ve yazı hizasını bozmadan görünür olmasını sağlar */
+@media (max-width: 768px) {
+  .navbar-logo {
+    font-size: 20px; /* Mobil görünümde yazı boyutunu küçült */
+  }
+}

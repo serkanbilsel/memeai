@@ -1,0 +1,98 @@
+/* Arka plan video */
+section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Ekranı tamamen kaplaması için */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video ayarları */
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Karanlık arka plan */
+.bg-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+
+/* Yazı animasyonu */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right: 2px solid transparent;
+  }
+  to {
+    border-right: 2px solid white;
+  }
+}
+
+/* Animasyonlu yazı efekti */
+.animate-text {
+  font-family: "Russo One", sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  font-size: 2rem; /* Font büyüklüğü */
+  text-align: center; /* Ortalanmış yazı */
+  color: white; /* Yazı rengi */
+  position: relative;
+  z-index: 10; /* Blur arkasında değil, ön planda olmasını sağlar */
+}
+
+/* Animasyonlu içerikler */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text {
+  animation: fadeInUp 1s ease-out forwards;
+  margin-bottom: 10px; /* Aralarına boşluk ekleyin */
+}
+
+/* Mobil görünüm ayarları */
+@media (max-width: 768px) {
+  section {
+    text-align: center;
+    height: auto; /* Yüksekliği otomatik yaparak içerik sığdırma */
+    padding: 20px; /* Üstten ve alttan boşluk ekle */
+  }
+
+  .animate-text {
+    animation: fadeInUp 1s ease-out forwards;
+    font-size: 1.2rem; /* Küçük ekranlarda font boyutunu biraz küçültün */
+    white-space: normal; /* Yazının kaymasını önleyin */
+  }
+
+  .bg-black {
+    opacity: 0.5; /* Karanlık arka plan opaklığını mobilde biraz artırın */
+  }
+}
