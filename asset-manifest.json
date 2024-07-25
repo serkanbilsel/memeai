@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memeai/static/css/main.eb67bb6d.css",
-    "main.js": "/memeai/static/js/main.c251468d.js",
+    "main.css": "/memeai/static/css/main.c5332840.css",
+    "main.js": "/memeai/static/js/main.f4ab6899.js",
     "reactPlayerYouTube.js": "/memeai/static/js/reactPlayerYouTube.e4abe910.chunk.js",
     "reactPlayerSoundCloud.js": "/memeai/static/js/reactPlayerSoundCloud.f7f8841f.chunk.js",
     "reactPlayerVimeo.js": "/memeai/static/js/reactPlayerVimeo.afbd7bee.chunk.js",
@@ -29,13 +29,13 @@
     "static/media/dexscanner.webp": "/memeai/static/media/dexscanner.6afe038f7f3cac6ea389.webp",
     "static/media/meta.webp": "/memeai/static/media/meta.08f7d4c1dee9b425ed01.webp",
     "static/media/poo.webp": "/memeai/static/media/poo.6a68d658346c5a9d2404.webp",
+    "index.html": "/memeai/index.html",
     "static/media/slick.svg": "/memeai/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/memeai/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/memeai/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/memeai/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/memeai/index.html",
-    "main.eb67bb6d.css.map": "/memeai/static/css/main.eb67bb6d.css.map",
-    "main.c251468d.js.map": "/memeai/static/js/main.c251468d.js.map",
+    "main.c5332840.css.map": "/memeai/static/css/main.c5332840.css.map",
+    "main.f4ab6899.js.map": "/memeai/static/js/main.f4ab6899.js.map",
     "reactPlayerYouTube.e4abe910.chunk.js.map": "/memeai/static/js/reactPlayerYouTube.e4abe910.chunk.js.map",
     "reactPlayerSoundCloud.f7f8841f.chunk.js.map": "/memeai/static/js/reactPlayerSoundCloud.f7f8841f.chunk.js.map",
     "reactPlayerVimeo.afbd7bee.chunk.js.map": "/memeai/static/js/reactPlayerVimeo.afbd7bee.chunk.js.map",
@@ -53,7 +53,7 @@
     "453.2d245bd9.chunk.js.map": "/memeai/static/js/453.2d245bd9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb67bb6d.css",
-    "static/js/main.c251468d.js"
+    "static/css/main.c5332840.css",
+    "static/js/main.f4ab6899.js"
   ]
 }
