@@ -1,0 +1,16 @@
+.chart-container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
+
+.custom-labels {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.custom-label {
+    margin: 0 15px;
+    cursor: pointer;
+}

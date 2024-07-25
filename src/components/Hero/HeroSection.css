@@ -1,0 +1,136 @@
+
+section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+.bg-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+ 
+
+}
+
+
+.hero-title {
+  font-family: "Russo One", sans-serif;
+  font-weight: 700;
+  color: #f5a623; 
+}
+
+.hero-title span {
+  color: #ffffff; 
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.relative.z-10.flex.flex-col.w-full.max-w-screen-lg.px-4.md:px-8.py-8.md:py-16 {
+  width: 80%; 
+  margin: 0 auto; 
+}
+
+.slider-container {
+  width: 100%; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  overflow: hidden; 
+}
+
+
+.slider-image {
+  width: 100%;
+  height: 90px; 
+  object-fit: contain; 
+  object-position: center; 
+}
+
+
+
+.logo {
+  width: 200px;
+  height: 200px; 
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+
+.logo-container {
+  width: 150px; 
+  height: 150px; 
+  margin-left: auto; 
+  margin-bottom: 20px; 
+}
+
+
+@media (max-width: 768px) {
+  section {
+    text-align: center;
+    height: auto; 
+    padding: 20px; 
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+
+
+  .scroll-to-top {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .relative.z-10.flex.flex-col.w-full.max-w-screen-lg.px-4.md:px-8.py-8.md:py-16 {
+    width: 100%; 
+  }
+}
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #000; 
+  color: #fff; 
+  border: none;
+  border-radius: 50%; 
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; 
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #444;
+}

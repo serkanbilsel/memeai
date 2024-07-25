@@ -1,0 +1,119 @@
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+
+.navbar-logo {
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+
+ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none; 
+  margin: 0;
+}
+
+ul li a {
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  display: block;
+  padding: 10px 15px; 
+}
+
+ul li a:hover {
+  color: #dddddd;
+}
+
+ul li a.active {
+
+}
+
+.flex.items-center img {
+  margin-right: 0.5rem; 
+}
+
+.navbar-logo-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+
+.buy-now-button {
+  background: linear-gradient(90deg, #f34e4e 0%, #f5a623 100%);
+  color: #ffffff;
+  padding: 10px 20px;
+  font-family: "Russo One", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 25px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  margin-left: auto; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  white-space: nowrap; 
+}
+
+.buy-now-button span {
+  display: inline-block; 
+  margin: 0 5px; 
+}
+
+.buy-now-button:hover {
+  background: linear-gradient(90deg, #f5a623 0%, #f34e4e 100%);
+  transform: scale(1.05);
+}
+
+.buy-now-button:active {
+  transform: scale(0.95); 
+}
+
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    margin: 1px 5; 
+  }
+
+  ul {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  ul li {
+    margin: 0; 
+  }
+
+  .buy-now-button {
+    margin: 1px 0; 
+  }
+  
+.navbar-logo-img {
+display: none;
+}
+}
