@@ -58,19 +58,21 @@ const options = {
 
 const TokenomicsSection = () => {
   return (
-    <section id="tokenomics" className="bg-gradient-to-t from-sky-900 via-gray-900 to-sky-800 py-16">
-      <div className="container mx-auto text-center">
-        <div className="flex flex-col lg:flex-row justify-center items-center mb-36">
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mr-0 lg:mr-4 mb-4 lg:mb-0">MemeAI</h2>
-          <h2 className='text-4xl lg:text-6xl font-bold text-green-600'>Tokenomics</h2>
-        </div>
-        <div className="flex justify-center">
-          <div className="w-full max-w-xs sm:max-w-md">
-            <Doughnut data={data} options={options} plugins={[ChartDataLabels]} />
-          </div>
-        </div>
+  <div className='bg-gradient-to-t from-sky-900 via-gray-900 to-sky-800 min-h-screen'>
+<section id="tokenomics" className="py-64">
+  <div className="container mx-auto text-center">
+    <div className="flex flex-wrap justify-center items-center mb-29">
+      <h2 className="text-4xl lg:text-6xl font-bold text-white mr-4">MemeAI </h2> 
+      <h2 className="text-4xl lg:text-6xl font-bold text-green-600">Tokenomics</h2>
+    </div>
+    <div className="flex justify-center">
+      <div className="w-full max-w-xs sm:max-w-md">
+        <Doughnut data={data} options={options} plugins={[ChartDataLabels]} />
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+</div>
   );
 };
 

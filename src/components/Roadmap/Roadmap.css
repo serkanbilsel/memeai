@@ -1,0 +1,31 @@
+/* Temel ayarlar */
+.roadmap-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.roadmap-image, .roadmap-image-vertical {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobil görünümde farklı görseli göster */
+.roadmap-image-vertical {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .roadmap-image {
+        display: none;
+    }
+    .roadmap-image-vertical {
+        display: block;
+    }
+}

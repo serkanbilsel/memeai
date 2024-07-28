@@ -20,6 +20,8 @@ const AboutSection = () => {
                     file: {
                         attributes: {
                             preload: 'auto',
+                            playsInline: true,
+                            controls: false,
                         },
                     },
                 }}

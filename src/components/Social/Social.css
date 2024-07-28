@@ -1,0 +1,36 @@
+/* Mevcut CSS kodlarınız */
+#social {
+    position: relative;
+    overflow: hidden;
+}
+
+.socialbgvideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2; /* Arka plan videosunun saydamlığını ayarla */
+}
+
+.icon {
+    font-size: 2rem; /* İkonların boyutunu büyüt */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+    transform: rotateY(360deg); /* 3D döndürme animasyonu */
+    color: #ff5733; /* İkonların üzerine gelince rengini değiştir */
+}
+
+/* Web tarafında ikonların boyutlarını ve yerleşimini ayarla */
+@media (min-width: 768px) {
+    #social .container {
+        max-width: 600px; /* İçeriğin genişliğini sınırla */
+    }
+    
+    .icon {
+        font-size: 3rem; /* Web tarafında daha büyük ikonlar */
+    }
+}

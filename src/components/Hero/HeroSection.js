@@ -23,20 +23,19 @@ const HeroSection = () => {
             behavior: "smooth"
         });
     };
-
     const sliderSettings = {
-        dots: false, 
+        dots: false,
         infinite: true,
-        speed: 700,
+        speed: 2000, // Kaymanın süresi
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false, 
+        autoplaySpeed: 5000, // Her 5 saniyede bir kayma
+        arrows: false,
     };
 
     return (
-        <section id="hero" className="relative flex flex-col items-center justify-center h-screen ">
+        <section id="hero" className="relative flex flex-col items-center justify-center h-screen">
              <div className="absolute inset-0 overflow-hidden">
                 <ReactPlayer
                     url={aiVideo}
@@ -50,6 +49,8 @@ const HeroSection = () => {
                         file: {
                             attributes: {
                                 preload: 'auto',
+                                playsInline: true,
+                                controls: false,
                             },
                         },
                     }}
@@ -86,11 +87,11 @@ const HeroSection = () => {
                         <div><img src={dexImage} alt="Dex UI" className="slider-image" /></div>
                         <div><img src={dexScannerImage} alt="Dex Scanner UI" className="slider-image" /></div>
                         <div><img src={metaImage} alt="Meta UI" className="slider-image" /></div>
-                        <div><img src={coingecko} alt="Coingecko" className="slider-image" /></div>
-                        <div><img src={poo} alt="Poocoin" className="slider-image" /></div>
                         <div><img src={trust} alt="Trustwallet" className="slider-image" /></div>
-                        <div><img src={pancake} alt="Pancakeswap" className="slider-image" /></div>
                         <div><img src={cmc} alt="Coinmarketcap" className="slider-image" /></div>
+                        <div><img src={pancake} alt="Pancakeswap" className="slider-image" /></div>
+                        <div><img src={poo} alt="Poocoin" className="slider-image" /></div>
+                        <div><img src={coingecko} alt="Coingecko" className="slider-image" /></div>
                     </Slider>
                 </div>
             </div>
