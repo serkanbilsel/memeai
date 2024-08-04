@@ -1,4 +1,3 @@
-/* Temel ayarlar */
 .roadmap-container {
     position: relative;
     height: 100vh;
@@ -16,16 +15,10 @@
     object-fit: cover;
 }
 
-/* Mobil görünümde farklı görseli göster */
-.roadmap-image-vertical {
-    display: none;
-}
-
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .roadmap-image {
-        display: none;
-    }
-    .roadmap-image-vertical {
-        display: block;
+        object-fit: contain; /* Orijinal yatay görüntüyü korur */
+        width: auto;
+        height: 100%;
     }
 }

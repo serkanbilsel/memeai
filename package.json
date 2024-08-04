@@ -1,7 +1,7 @@
 {
   "name": "realmeme-ai",
   "version": "0.1.0",
-  "homepage": "http://serkanbilsel.github.io/memeai",
+  "homepage": "",
   "main": "index.js",
   "private": true,
   "dependencies": {

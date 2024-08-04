@@ -7,21 +7,16 @@ import TokenomicsSection from './components/Tokenomics/TokenomicsSection';
 import RoadmapSection from './components/Roadmap/RoadmapSection';
 import WhitepaperSection from './components/WhitePaper/WhitepaperSection';
 import SocialLinksSection from './components/Social/SocialLinksSection';
-
-
- const baseUrl = process.env.PUBLIC_URL || '/';
-
 function App() {
   return (
-    // <Router basename={baseUrl}>
-    <Router basename={baseUrl} >
+  
+    <Router >
       <Navbar />
       <Routes>
         <Route path="/" element={
           <>
             <HeroSection />
             <AboutSection />
-   
             <SocialLinksSection />
           </>
         } />
@@ -32,7 +27,5 @@ function App() {
     </Router>
   );
 }
-
-
 
 export default App;

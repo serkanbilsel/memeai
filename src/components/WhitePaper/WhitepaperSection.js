@@ -1,51 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import aiVideoHorizontal from '../../assets/whitepaper.mp4'; // Yatay video
-import aiVideoVertical from '../../assets/whitapepervertical.mp4'; // Dikey video
-import "./WhitePaper.css";
+import './WhitePaper.css';
 
 const WhitepaperSection = () => {
-    const [videoUrl, setVideoUrl] = useState(() => {
-        return window.innerWidth <= 767 ? aiVideoVertical : aiVideoHorizontal;
-    });
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 767 && videoUrl !== aiVideoVertical) {
-                setVideoUrl(aiVideoVertical);
-            } else if (window.innerWidth > 767 && videoUrl !== aiVideoHorizontal) {
-                setVideoUrl(aiVideoHorizontal);
-            }
+            setIsMobile(window.innerWidth <= 767);
         };
 
-        // Pencere boyutunu dinleyerek güncelle
         window.addEventListener('resize', handleResize);
-
-        // Temizleme işlevi ile olay dinleyicisini kaldır
         return () => window.removeEventListener('resize', handleResize);
-    }, [videoUrl]);
+    }, []);
 
     return (
-        <section id="whitepaper" className="relative">
+        <section id="whitepaper">
             <div className="video-container">
-                <ReactPlayer
-                    url={videoUrl}
-                    playing
-                    loop
-                    muted
-                    width="100%"
-                    height="100%"
-                    className="object-cover react-player"
-                    config={{
-                        file: {
-                            attributes: {
-                                preload: 'auto',
-                                playsInline: true,
-                                controls: false,
+                {isMobile ? (
+                    <ReactPlayer
+                        url={aiVideoHorizontal}
+                        playing
+                        loop
+                        muted
+                     
+                        className="react-player-mobile"
+                        config={{
+                            file: {
+                                attributes: {
+                                    preload: 'auto',
+                                    playsInline: true,
+                                    controls: false,
+                                },
                             },
-                        },
-                    }}
-                />
+                        }}
+                    />
+                ) : (
+                    <ReactPlayer
+                        url={aiVideoHorizontal}
+                        playing
+                        loop
+                        muted
+                        width="100%"
+                        height="100%"
+                        className="react-player-web"
+                        config={{
+                            file: {
+                                attributes: {
+                                    preload: 'auto',
+                                    playsInline: true,
+                                    controls: false,
+                                },
+                            },
+                        }}
+                    />
+                )}
             </div>
         </section>
     );

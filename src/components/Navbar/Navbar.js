@@ -1,29 +1,37 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
     const handleLinkClick = (path) => {
-        setIsOpen(false); // Menü kapanıyor
+        setIsOpen(false);
         if (window.location.pathname === '/') {
             document.getElementById(path)?.scrollIntoView({ behavior: 'smooth' });
         } else {
-            window.location.hash = `#${path}`;
+            window.location.replace(`/#${path}`);
         }
     };
 
+    useEffect(() => {
+        const hash = location.hash;
+        if (hash) {
+            const id = hash.replace('#', '');
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [location]);
 
     return (
-        <nav className="bg-gray-900 d-sm-flex text-white  py-2 w-full top-0 left-0 z-50">
-            <div className="container mx-auto flex items-center justify-between ">
-                <div className="flex items-center">
+        <nav className="bg-gray-900 d-sm-flex text-white py-2 w-full top-0 left-0 z-50">
+        <div className="container mx-auto flex items-center justify-between">
+            <div className="flex items-center">
                     <img src={logo} alt="Logo" className="navbar-logo-img" />
-                    <NavLink to="/" className="navbar-logo">
+                    <NavLink to="/" className="navbar-logo" onClick={() => handleLinkClick('hero')}>
                         <span className="text-white">MEME</span> AI
                     </NavLink>
                 </div>
@@ -35,7 +43,8 @@ const Navbar = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                <ul className="hidden md:flex flex-col ml- md:flex-row md:space-x-6 space-y-4 md:space-y-0 mt-4 md:mt-0 md:justify-center w-full ">
+                <ul className={`hidden md:flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 mt-4 md:mt-0 md:justify-center w-full`}>
+
                     <li>
                         <NavLink
                             to="/"
@@ -58,7 +67,7 @@ const Navbar = () => {
                         <NavLink
                             to="/tokenomics"
                             className="cursor-pointer"
-                            onClick={() => handleLinkClick('tokenomics')}
+                            onClick={() => setIsOpen(false)}
                         >
                             TOKENOMICS
                         </NavLink>
@@ -67,7 +76,7 @@ const Navbar = () => {
                         <NavLink
                             to="/roadmap"
                             className="cursor-pointer"
-                            onClick={() => handleLinkClick('roadmap')}
+                            onClick={() => setIsOpen(false)}
                         >
                             ROADMAP
                         </NavLink>
@@ -125,7 +134,7 @@ const Navbar = () => {
                         <NavLink
                             to="/tokenomics"
                             className="cursor-pointer"
-                            onClick={() => handleLinkClick('tokenomics')}
+                            onClick={() => setIsOpen(false)}
                         >
                             TOKENOMICS
                         </NavLink>
@@ -134,7 +143,7 @@ const Navbar = () => {
                         <NavLink
                             to="/roadmap"
                             className="cursor-pointer"
-                            onClick={() => handleLinkClick('roadmap')}
+                            onClick={() => setIsOpen(false)}
                         >
                             ROADMAP
                         </NavLink>
@@ -158,7 +167,6 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                 </ul>
-                
             </div>
         </nav>
     );

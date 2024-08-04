@@ -26,11 +26,11 @@ const HeroSection = () => {
     const sliderSettings = {
         dots: false,
         infinite: true,
-        speed: 2000, // Kaymanın süresi
+        speed: 1000, // Kaymanın süresi
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000, // Her 5 saniyede bir kayma
+        autoplaySpeed: 1000, // Her 5 saniyede bir kayma
         arrows: false,
     };
 
